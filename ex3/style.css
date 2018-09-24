@@ -1,0 +1,36 @@
+body {
+  /* font-size: 24px; */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+form {
+  /* display: inline-block; */
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 2rem;
+  /* margin-left: 25%; */
+}
+label {
+  display: block;
+  float: left;
+  width: 10rem;
+}
+.clearfix::after {
+  /* display: block;
+  clear: both; */
+}
+input.text {
+  padding: 0.5rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+}
+button.submit {
+  padding: 0.5rem;
+  margin-left: 10rem;
+  width: 10rem;
+}

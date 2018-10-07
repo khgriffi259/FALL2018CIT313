@@ -22,12 +22,11 @@
         //get model variables 
         function getName(){
             return array(   
-        
-                'id'=>$this->userID,
-                'first'=>$this->firstname,
-                'last'=>$this->lastname,
-                'useremail'=>$this->email,
-                'userrole'=>$this->role
+                'userID'=>$this->userID,
+                'firstname'=>$this->firstname,
+                'lastname'=>$this->lastname,
+                'email'=>$this->email,
+                'role'=>$this->role
             );
         }
     } 

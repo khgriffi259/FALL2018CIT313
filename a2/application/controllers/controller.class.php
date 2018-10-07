@@ -30,12 +30,12 @@
             $this->user->email = 'kyhgriff@iu.edu';
             $this->user->role = 'user';
 
-            
             //get data from model 
             $data = $this->user->getName();
+            // var_dump($data);
+            // die();
             // load view and pass data to view
             $this->load->view('view.php',$data);
-
         }
     }
 ?>

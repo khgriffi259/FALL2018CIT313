@@ -25,7 +25,7 @@
             
             // set model variables             
             $this->user->userID = 'kyhgriff';
-            $this->user->firstname = 'Frank';
+            $this->user->firstname = 'Kyle';
             $this->user->lastname = 'Griffin';
             $this->user->email = 'kyhgriff@iu.edu';
             $this->user->role = 'user';

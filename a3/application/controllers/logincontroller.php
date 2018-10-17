@@ -2,15 +2,19 @@
 
 class LoginController extends Controller{
 	
+    public function defaultTask(){
+		
+		$this->userObject = new User();
+		$this->set('task', 'do_login');
 	
+	
+	}
+
    
-   public function add($num1 = 0,$num2 = 0,$num3 = 0){
+   public function do_login(){
 	   
 
-		$sum = $num1+$num2+$num3;
-
-	   
-	   $this->set('numbers',$sum);
+		
 	   
    }
 	

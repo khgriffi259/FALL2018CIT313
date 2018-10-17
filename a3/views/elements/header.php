@@ -40,12 +40,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<?php echo BASE_URL?>">MVC Pro</a>
+          <a class="brand" href="<?php echo BASE_URL?>home/">MVC Pro</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="<?php echo BASE_URL?>">Home</a></li>
+              <li class="active"><a href="<?php echo BASE_URL?>home/">Home</a></li>
               <li><a href="<?php echo BASE_URL?>blog/">Blog</a></li>
               <li><a href="<?php echo BASE_URL?>login/">Login</a></li>
+              <li><a href="<?php echo BASE_URL?>members/">Members</a></li>
+              <li><a href="<?php echo BASE_URL?>register/">Register</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

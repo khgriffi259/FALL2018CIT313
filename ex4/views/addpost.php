@@ -1,4 +1,4 @@
-<?php include('elements/admin_header.php');?>
+<?php include('elements/header.php');?>
 
 <div class="container">
 	<div class="page-header">
@@ -30,5 +30,5 @@
       </div>
     </div>
 </div>
-<?php include('elements/admin_footer.php');?>
+<?php include('elements/footer.php');?>
 

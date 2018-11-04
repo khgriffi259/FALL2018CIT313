@@ -2,3 +2,6 @@
 ex1/.DS_Store
 .DS_Store
 a2.zip
+ex4/application/controllers/logincontroller.php
+ex4/application/models/user.php
+ex4/application/controllers/logincontroller.php

@@ -15,11 +15,12 @@ class CategoriesController extends Controller{
 		$outcome = $this->categoryObject->getCategories();
 		}
 		
-	public function edit($cID){
+	// public function edit($cID){
+	public function edit(){
 		$cID=$_POST['categoryID'];
+		
 		$this->categoryObject = new Categories();
 		$outcome = $this->categoryObject->getCategory($cID);
-
 		$this->set('category', $outcome);
 		$this->set('task', 'update');
 	}

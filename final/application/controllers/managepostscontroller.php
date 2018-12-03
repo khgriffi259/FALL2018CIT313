@@ -29,7 +29,8 @@ class ManagePostsController extends Controller{
 		header('Location: '.BASE_URL.'manageposts/');
 	}
 	
-	public function edit($pID){
+	public function edit(){
+		$pID=$_POST['pID'];
 		$this->postObject = new Post();
 		$post = $this->postObject->getPost($pID);
 		$this->getCategories();
@@ -40,7 +41,7 @@ class ManagePostsController extends Controller{
 		$this->set('date', $post['date']);
 		$this->set('category', $post['categoryID']);
 		$this->set('task', 'update');
-		header('Location: '.BASE_URL.'manageposts/');
+		// header('Location: '.BASE_URL.'manageposts/');
 	}
 	
 	public function getCategories(){

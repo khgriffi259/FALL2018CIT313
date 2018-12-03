@@ -20,6 +20,7 @@
                 <h3 display="inline"><?php echo $value; ?></h3>
                 <form action="<?php echo BASE_URL?>categories/edit/<?php echo $key?>" method="post" style="display:inline;"> 
                     <input type="hidden" name="categoryID" value="<?php echo $key?>">
+                    
                     <button type="submit" class="btn btn-warning">Edit</button>
                 </form>    
                 <form action="<?php echo BASE_URL?>categories/delete" method="post" style="display:inline;"> 

@@ -21,6 +21,7 @@ class Categories extends Model{
 	}
 	
 	public function getCategory($cID){
+		
 		$sql = 'SELECT categoryID, name FROM categories WHERE categoryID=?';
 		$outcome = $this->db->getrow($sql,array($cID));
 

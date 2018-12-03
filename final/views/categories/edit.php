@@ -14,8 +14,9 @@
   
   <form action="<?php echo BASE_URL?>categories/<?php echo $task?>/<?php echo $value?>" method="POST">
     <label for="editCagory">Edit Category</label>
-		<input type="text" name="categoryname" class="input" id="editCategory" value="<?php echo $value?>">
-		<br>
+		<input type="text" name="categoryname" class="input" id="editCategory" value="<?php echo $category['name'];?>">
+    <input type="hidden" name="categoryID" value="<?php echo $category['categoryID'];?>">
+    <br>
 		<input type="submit" class='btn btn-primary' value="Submit">
 	 </form>		
   

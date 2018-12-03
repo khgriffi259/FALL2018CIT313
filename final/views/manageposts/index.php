@@ -1,5 +1,5 @@
 <?php include('views/elements/header.php');?>
-
+<div id="background">
 <div class="container">
     <div class="page-header">
         <h1><?php echo $title; ?></h1>
@@ -46,6 +46,7 @@
     <?php }?>
 
     </div>
-    
+    </div>
+
 <?php include('views/elements/footer.php');?>
 

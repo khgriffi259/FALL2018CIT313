@@ -1,5 +1,5 @@
 <?php include('views/elements/header.php');?>
-
+<!-- <div id="background"> -->
 <div class="container">
 	<div class="page-header">
    <h1>Add Post</h1>
@@ -53,5 +53,7 @@ date_default_timezone_set('America/Indiana/Indianapolis');?>
       </div>
     </div>
 </div>
+<!-- </div> -->
+
 <?php include('views/elements/footer.php');?>
 

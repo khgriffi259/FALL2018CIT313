@@ -15,7 +15,7 @@
 
     <div>
         <a href="<?php echo BASE_URL?>manageposts/add/" class="btn btn-primary">Add Post</a>
-        <a href="<?php echo BASE_URL?>manageposts/categories/" class="btn btn-primary">Manage Categories</a>
+        <a href="<?php echo BASE_URL?>categories/" class="btn btn-primary">Manage Categories</a>
     </div> 
 
     <br>
@@ -31,7 +31,7 @@
         <div style="margin-top: 15px;">
             <a href="<?php echo BASE_URL?>blog/post/<?php echo $p['pID'];?>" class="btn btn-primary">View Post</a>
 
-            <form action="<?php echo BASE_URL?>manageposts/edit/" method="post" style="display:inline"> 
+            <form action="<?php echo BASE_URL?>manageposts/edit/<?php echo $p['pID'];?>" method="post" style="display:inline"> 
                 <input type="hidden" name="pID" value="<?php echo $p['pID'];?>">
                 <button type="submit" class="btn btn-warning">Edit</button>
             </form>    

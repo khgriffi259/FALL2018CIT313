@@ -49,9 +49,9 @@ class Categories extends Model{
 
 			$sql='DELETE FROM categories WHERE categoryID = ?';
 			$debug =1;
-			if($debug){
-			    echo '<script> alert('. $data['categoryID'] . ');</script>';
-			}
+			// if($debug){
+			//     echo '<script> alert('. $data['categoryID'] . ');</script>';
+			// }
 			
 			$this->db->execute($sql,$data);
 			$message = 'Category deleted.';

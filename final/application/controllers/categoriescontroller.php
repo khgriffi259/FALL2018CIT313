@@ -61,7 +61,7 @@ class CategoriesController extends Controller{
 		$this->categoryObject = new Categories();
 		$result = $this->categoryObject->deleteCategory($data);
 		$this->set('message',$result);
-		// header('Location: '.BASE_URL.'manageposts/');
+		header('Location: '.BASE_URL.'manageposts/');
 	}
 
 }

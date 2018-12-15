@@ -7,6 +7,7 @@ class RegisterController extends Controller{
 	public function index(){
 		// $userObject = new Users();
 		$this->set('task','add');
+		$this->set('active', 0);
 	}
 	
 	public function add(){

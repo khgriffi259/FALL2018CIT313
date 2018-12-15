@@ -3,6 +3,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo BASE_URL?>views/js/jquery.js"></script>
     <script src="<?php echo BASE_URL?>views/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASE_URL?>views/js/validate_form.js"></script>
+
+
+
    <?php
    if($u->isAdmin()) {
        ?>
@@ -58,6 +62,31 @@
        });
    });
 
+   </script>
+
+<script>
+   $(document).ready(function(){
+       $('.weather-loader').submit(function(event) {
+           event.preventDefault();
+           var el = $(this);
+           $.ajax({
+               url: el.attr('action'),
+               type: 'POST',
+               success: function(data){
+                   el.parent().append(data);
+                   el.remove();
+               }
+           });
+       });
+   });
 </script>
+
+<script>
+
+
+
+
+
   </body>
 </html>
+

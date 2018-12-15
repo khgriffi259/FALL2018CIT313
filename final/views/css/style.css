@@ -43,3 +43,12 @@ body {
 .form-control {
   width: 100%;
 }
+
+#fields_with_errors{
+  color: red;
+  font-weight: bold;
+}
+
+#postentry{
+  color: black;
+}

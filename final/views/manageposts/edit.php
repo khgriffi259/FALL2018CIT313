@@ -20,7 +20,8 @@
      	  
           <label for="date">Date</label>
           <?php // set timezone
-date_default_timezone_set('America/Indiana/Indianapolis');?>
+          
+          date_default_timezone_set('America/Indiana/Indianapolis');?>
           <input name="date" id="date" size="16" type="date" value="<?php echo $date = date('Y-m-d H:i:s'); ?>">
           
           <label for="category">Category</label>

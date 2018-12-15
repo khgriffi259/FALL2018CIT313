@@ -13,23 +13,37 @@ class LoginController extends Controller{
 	   // handle login
 
        $this->userObject = new Users();
-
+       
        if($this->userObject->checkUser($_POST['email'],$_POST['password'])) {
-
+        
+            // if email and password is verified, retrieve the userinfo
            $userInfo = $this->userObject->getUserFromEmail($_POST['email']);
 
-           $_SESSION['uID'] = $userInfo['uID'];
+        //    $debug =1;
+        //    if($debug){   
+        //        echo '<script> alert('. $userInfo['uID'] . ');</script>';
+        //    }
 
-          if(strlen($_SESSION['redirect']) > 0 ) {
-              $view = $_SESSION['redirect'];
-              unset($_SESSION['redirect']);
-              header('Location: '.BASE_URL.$view);
-          }
-           else {
-               header('Location: '.BASE_URL);
-           }
+        //    check if userinfo active value is 1 and login if true
 
+            if($this->userObject->isActive($userInfo['uID'])){
+               
+               $_SESSION['uID'] = $userInfo['uID'];
+               
+               if(strlen($_SESSION['redirect']) > 0 ) {
+                   $view = $_SESSION['redirect'];
+                   unset($_SESSION['redirect']);
+                   header('Location: '.BASE_URL.$view);
+                }
+                else {
+                    header('Location: '.BASE_URL);
+                }
+            }
+            else {
+                // return error message that account is not approved
+                $this->set('error','Your account is awaiting approval.');
 
+            }
 
 
        }

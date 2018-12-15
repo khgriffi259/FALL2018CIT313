@@ -11,8 +11,13 @@ include('views/elements/header.php')
                 </div>
             <?php };?>   
         </div>
+        
+        <!-- error messages div -->
+        <div id="fields_with_errors"></div>
+
         <?php include('views/elements/login_form.php');?>
     </div>
 </div>
+
 <?php include('views/elements/footer.php');?>
 

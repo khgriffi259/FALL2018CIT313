@@ -23,10 +23,9 @@ class ManagePostsController extends Controller{
 		$this->postObject = new Post();
 		$data = array('title'=>$_POST['title'],'content'=>$_POST['content'],'category'=>$_POST['category'],'date'=>$_POST['date']);
 		//$this->getCategories();
-			
+
 		$result = $this->postObject->addPost($data);
 		$this->set('message', $result);
-		header('Location: '.BASE_URL.'manageposts/');
 	}
 	
 	public function edit(){
@@ -67,7 +66,7 @@ class ManagePostsController extends Controller{
 		$data = array('pID'=>$_POST['pID']);
 		$this->postObject = new Post();
 		$result = $this->postObject->deletePost($data);
-		$this->set('message',$result);
 		header('Location: '.BASE_URL.'manageposts/');
+		$this->set('message',$result);
 	}
 }

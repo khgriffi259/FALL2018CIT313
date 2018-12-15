@@ -87,7 +87,7 @@ class Post extends Model{
 
     public function updatePost($data) {
 
-        $sql = 'UPDATE posts SET title = ?, content = ?, categoryID = ?, date = ? where pID = ?';
+        $sql = 'UPDATE posts SET title = ?, content = ?, categoryID = ?, date = ? WHERE pID = ?';
         $this->db->execute($sql, $data);
         $message = "Post updated.";
         return $message;

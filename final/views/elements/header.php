@@ -52,7 +52,7 @@
               <li class="active"><a href="<?php echo BASE_URL?>">Home</a></li>
               <li><a href="<?php echo BASE_URL?>blog/">Blog</a></li>
               <li><a href="<?php echo BASE_URL?>members/">Members</a></li>
-              <li><a href="<?php echo BASE_URL?>weather/">Weather</a></li>
+              <!-- <li><a href="<?php echo BASE_URL?>weather/">Weather</a></li> -->
 
             </ul>
 
@@ -77,11 +77,17 @@
                                         <a href="<?php echo BASE_URL?>manageposts/">Manage Posts</a>
                                     </li>
                                     <li>
+                                        <a href="<?php echo BASE_URL?>manageusers/">Manage Users</a>
+                                    </li>
+                                    <li>
                                         <a href="<?php echo BASE_URL?>categories/">Manage Categories</a>
                                     </li>
                                 <?php
                                 }
                                 ?>
+                                <li>
+                                    <a href="<?php echo BASE_URL?>members/profile/">My Profile</a>
+                                </li>
                                 <li>
                                     <a href="<?php echo BASE_URL?>login/logout/">Log Out</a>
                                 </li>
@@ -94,10 +100,10 @@
               }
               else {
               ?>
-                  <ul class="nav pull-right">
-                  <li><a href="<?php echo BASE_URL?>login/">Login</a></li>
-                  <li><a href="<?php echo BASE_URL?>register/">Register</a></li>
-                      </ul>
+                    <ul class="nav pull-right">
+                        <li><a href="<?php echo BASE_URL?>login/">Login</a></li>
+                        <li><a href="<?php echo BASE_URL?>register/">Register</a></li>
+                    </ul>
 
               <?
               }

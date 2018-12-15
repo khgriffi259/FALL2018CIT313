@@ -6,6 +6,7 @@ class Users extends Model{
     public $last_name;
     public $email;
     protected $user_type;
+    protected $active;
 
 
 	// Constructor
@@ -21,11 +22,18 @@ class Users extends Model{
             $this->last_name = $userInfo['last_name'];
             $this->email = $userInfo['email'];
             $this->user_type = $userInfo['user_type'];
+            $this->active = $userInfo['active'];
 
         }
 
     }
 
+    public function getFirstName() {
+        return $this->first_name;
+    }
+    public function getLastName() {
+        return $this->last_name;
+    }
     public function getUserName() {
         return $this->first_name. ' ' . $this->last_name;
     }
@@ -55,7 +63,19 @@ class Users extends Model{
                 return false;
             }
     }
-	
+    public function isActive($uID) {
+           
+        $user = $this->getUserFromID($uID);
+        if($user['active'] == '1') {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    
+
 	public function getUser($uID){
 		$sql = 'SELECT uID, first_name, last_name, email, password FROM users WHERE uID = ?';
 		
@@ -69,7 +89,7 @@ class Users extends Model{
 		if($limit > 0){
 			$numusers = ' LIMIT '.$limit;
 		}
-		$sql = 'SELECT uID, first_name, last_name, email, password FROM users'.$numusers;
+		$sql = 'SELECT * FROM users'.$numusers;
 		
 		// perform query
 		$results = $this->db->execute($sql);
@@ -132,5 +152,33 @@ class Users extends Model{
 
     }
 
-	
+    public function approveUser($uID){
+        $sql = 'UPDATE users SET active = 1 where uID = ?';
+        $this->db->execute($sql, $uID);
+        $message = "User account approved.";
+        return $message;
+
+    }
+    
+    public function deleteUser($uID){
+        $sql='DELETE FROM users WHERE uID = ?';
+        // $debug =1;
+        // if($debug){
+        //     echo '<script> alert('. $data['pID'] . ');</script>';
+        // }
+        
+        $this->db->execute($sql,$uID);
+        $message = 'User deleted.';
+        return $message;
+
+    }
+    
+    public function updateUser($data){
+        $sql = 'UPDATE users SET first_name = ?, last_name = ?, email = ? WHERE uID = ?';
+        $this->db->execute($sql, $data);
+        $message = "User updated.";
+        return $message;
+
+    }
+
 }
